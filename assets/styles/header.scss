@@ -34,6 +34,7 @@ ul.navbar-nav {
             color: $text-color;
             text-decoration: none;
             opacity: .5;
+            transition: 0.3s;
 
             &:hover {
                 opacity: 1;
@@ -49,9 +50,10 @@ ul.navbar-nav {
 }
 
 .social-icons img {
-    width: 50px;
-    margin: 16px;
+    width: 60px;
+    margin: 10px;
     opacity: .5;
+    transition: 0.3s;
 
     &:hover {
         opacity: 1;
