@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+$bg-color: #333;
+$header-color: #222;
+// $text-color-accent: #17252a;
+$text-color: #e6e6e6;
+// $muted-color: #7a7a7a;
+// $light-gray: #a4aaac;
+
+$main-accent: #EA1C2D;
+// $dark-accent: #2b7a78;
+// $black-accent: #17252a;
+
+*,
+*::before,
+*::after {
+    transition: 0.3s;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    color: $text-color;
+    background-color: $bg-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    padding-top: 16px;
+}
+
+h1 {
+    font-family: "Special Elite", serif;
+
+    &.title {
+        margin: 16px auto;
+        width: fit-content;
+        font-size: 40px;
+    }
+}
+
+div.center-column {
+    width: 60%;
+    height: fit-content;
+    margin: 0 auto;
+}
