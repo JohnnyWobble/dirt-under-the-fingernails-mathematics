@@ -1,3 +1,71 @@
 ---
 ---
+
 @import "shared";
+
+p {
+    margin: 8px 0;
+}
+
+.problem {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.math {
+    background-color: $dark-text;
+    display: inline-block;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 16px;
+    margin: 4px 0;
+
+    span {
+        font-size: 16px;
+    }
+}
+
+.question {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    column-gap: 10px;
+    width: 85%;
+    margin: 0 auto;
+
+    .number {
+        margin: auto 0 auto auto;
+        height: fit-content;
+        font-weight: normal;
+    }
+
+    p {
+        height: fit-content;
+        transform: translateY(-3px);
+    }
+}
+
+.math-sml {
+    @extend .math;
+    margin: 0;
+    padding: 4px;
+}
+
+.answer {
+    margin-left: 16px;
+    background-color: black;
+    color: black;
+    padding: 12px;
+    border-radius: 24px;
+    transition: .3s;
+    width: fit-content;
+
+    &:hover {
+        color: $text-color;
+    }
+}
+
+.animate {
+    margin: 8px 0 12px 16px;
+}

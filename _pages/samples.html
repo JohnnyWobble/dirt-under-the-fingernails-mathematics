@@ -3,6 +3,8 @@ layout: default
 permalink: /samples
 stylesheets:
 - samples
+scripts:
+- ps4q1.js
 ---
 
 <div class="container">
@@ -14,5 +16,55 @@ stylesheets:
             however, they do range in difficulty and methodology.
         </p>
         <div class="separator">Sample Problem 1</div>
+        <div class="problem">
+            <h3>Given</h3>
+
+            <p>
+                Consider the following model, consisting of propagation functions:
+            </p>
+
+            <!-- TODO center this -->
+            <p class="math">`I(x,y,t+1) = U(x,y,t) * [0.15(I(x-1,y,t) + I(x,y-1,t) + I(x+1,y,t) + I(x,y+1,t)) +
+                0.4I(x,y,t)]`</p>
+            <p class="math">`U(x,y,t+1) = U(x,y,t) - I(x,y,t)`</p>
+            <p class="math">`R(x,y,t+1) = R(x,y,t) + I(x,y,t)`</p>
+            <p>for <span class="math">`1 <= x <=5`</span>, <span class="math">`1 <= y <=5`</span>, and <span
+                                    class="math">`t >= 0`</span></p>
+            <p>Initial conditions:</p> 
+            <p class="math">`I(x,y,0)={(.1, "if " x=2 " and " y=3), (0, "else"):}`</p>
+            <p class="math">`U(x,y,0)={(.9, "if " x=2 " and " y=3), (0, "else"):}`</p>
+            <p class="math">`R(x,y,0)=0`</p>
+
+            <h3>Questions</h3>
+            <div class="question">
+                <h4 class="number">1)</h4>
+                <p>Compute 
+                    <span class="math-sml">`I`</span>, 
+                    <span class="math-sml">`U`</span>,
+                    and 
+                    <span class="math-sml">`R`</span>
+                    for all values of
+                    <span class="math-sml">`x`</span>
+                    and 
+                    <span class="math-sml">`y`</span>
+                    between
+                    <span class="math-sml">`1`</span>
+                    and
+                    <span class="math-sml">`5`</span>,
+                    and for all small values of
+                    <span class="math-sml">`t`</span>.
+                </p>
+                <span></span>
+                <button class="animate">Animate Answer</button>
+            </div>
+            <div class="question">
+                <h4 class="number">2)</h4>
+                <p>
+                    What do you suppose is being modeled here? How would you improve the model?
+                </p>
+                <span></span>
+                <p class="answer">Take the class and find out!</p>
+            </div>
+        </div>
     </div>
 </div>
