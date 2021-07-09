@@ -4,7 +4,7 @@ permalink: /samples
 stylesheets:
 - samples
 scripts:
-- ps4q1.js
+- animations
 ---
 
 <div class="container">
@@ -55,7 +55,7 @@ scripts:
                     <span class="math-sml">`t`</span>.
                 </p>
                 <span></span>
-                <button class="animate">Animate Answer</button>
+                <button class="animate" onclick="showAnimation('ps4q1')">Show Answer</button>
             </div>
             <div class="question">
                 <h4 class="number">2)</h4>
@@ -64,6 +64,18 @@ scripts:
                 </p>
                 <span></span>
                 <p class="answer">Take the class and find out!</p>
+            </div>
+            <div id="ps4q1" class="modal-base hidden">
+                <div class="modal">
+                    <div class="controls">
+                        <button><img src="assets/images/icons/play-arrow.svg"/></button>
+                        <button><img src="assets/images/icons/pause-btn.svg"/></button>
+                        <button><img src="assets/images/icons/restart-btn.svg"/></button>
+                    </div>
+                    <div class="grid10x" id="ps4q1Board">
+                    </div>
+                    <button class="return-btn" onclick="closeAnimation('ps4q1')">Return</button>
+                </div>
             </div>
         </div>
     </div>
