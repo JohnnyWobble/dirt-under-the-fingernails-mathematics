@@ -9,8 +9,27 @@ class PS4Q1 {
         }
     }
 
-    start() {
+    resetVals() {
+        
+    }
 
+    updateHTML() {
+        let children = $(this.board).children;
+        for (let i = 0; i < this.size * this.size; i++) {
+            children[i].text(getValue(i));
+        }
+    }
+
+    start() {
+        console.log("START");
+    }
+
+    pause() {
+        console.log("PAUSE");
+    }
+
+    reset() {
+        console.log("RESET");
     }
 
     getValue(index) {

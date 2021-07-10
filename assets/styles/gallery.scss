@@ -1,0 +1,54 @@
+---
+---
+@import "shared";
+
+div.center-column {
+    width: fit-content;
+}
+
+div.img-row {
+    display: flex;
+    flex-direction: row;
+    // justify-items: center;
+    justify-content: center;
+    height: fit-content;
+    min-width: 70%;
+
+    div.img-box {
+        position: relative;
+        min-width: fit-content;
+        height: fit-content;
+        padding: 16px;
+    }
+}
+
+img.gallery-img {
+    border-radius: 16px;
+    // width: 25vw;
+    // width: 350px;
+    height: 270px;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: .3;
+    }
+}
+
+p.img-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .3s;
+    pointer-events: none;
+    margin: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    img:hover + & {
+        opacity: 1;
+    }
+}
