@@ -32,7 +32,9 @@ class PS4Q1 {
     }
 
     start() {
-        this.intervalFn = window.setInterval(this.step, this.interval);
+        if (this.intervalFn == null) {
+            this.intervalFn = window.setInterval(this.step, this.interval);
+        }
     }
 
     pause() {
