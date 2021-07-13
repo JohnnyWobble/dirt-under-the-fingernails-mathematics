@@ -112,8 +112,7 @@ p {
 
 .grid-box {
     border-radius: 12px;
-    // background-color: rgba(black, .2);
-    background-color: hsla(0, 0, 0, 0.2);
+    background-color: hsla(0, 0%, 0%, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,10 +147,22 @@ p {
 }
 
 button.vert {
-    transform: translateX(-27%)  rotate(-90deg);
+    transform: rotate(-90deg);
 }
 
 .btn-col {
     width: 50px;
+    margin: 16px;
+    margin-left: 0;
+}
 
+#tTicker {
+    display: block;
+    margin: 4px auto 16px auto;
+    padding: 8px;
+    font-size: 24px;
+}
+
+.fake-math {
+    font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw;
 }

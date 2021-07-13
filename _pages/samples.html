@@ -30,22 +30,22 @@ scripts:
             <p class="math">`R(x,y,t+1) = R(x,y,t) + I(x,y,t)`</p>
             <p>for <span class="math">`1 <= x <=5`</span>, <span class="math">`1 <= y <=5`</span>, and <span
                                     class="math">`t >= 0`</span></p>
-            <p>Initial conditions:</p> 
+            <p>Initial conditions:</p>
             <p class="math">`I(x,y,0)={(.1, "if " x=2 " and " y=3), (0, "else"):}`</p>
-            <p class="math">`U(x,y,0)={(.9, "if " x=2 " and " y=3), (0, "else"):}`</p>
+            <p class="math">`U(x,y,0)={(.9, "if " x=2 " and " y=3), (1, "else"):}`</p>
             <p class="math">`R(x,y,0)=0`</p>
 
             <h3>Questions</h3>
             <div class="question">
                 <h4 class="number">1)</h4>
-                <p>Compute 
-                    <span class="math-sml">`I`</span>, 
+                <p>Compute
+                    <span class="math-sml">`I`</span>,
                     <span class="math-sml">`U`</span>,
-                    and 
+                    and
                     <span class="math-sml">`R`</span>
                     for all values of
                     <span class="math-sml">`x`</span>
-                    and 
+                    and
                     <span class="math-sml">`y`</span>
                     between
                     <span class="math-sml">`1`</span>
@@ -67,19 +67,21 @@ scripts:
             </div>
             <div id="ps4q1" class="modal-base hidden">
                 <div class="modal">
+                    <p class="math fake-math" id="tTicker">t  = 0</p>
                     <div class="controls">
-                        <button onclick="ps4q1.start()"><img src="assets/images/icons/play-arrow.svg"/></button>
-                        <button onclick="ps4q1.pause()"><img src="assets/images/icons/pause-btn.svg"/></button>
-                        <button onclick="ps4q1.reset()"><img src="assets/images/icons/restart-btn.svg"/></button>
+                        <button onclick="ps4q1.step()"><img src="assets/images/icons/next-btn.svg" /></button>
+                        <button onclick="ps4q1.start()"><img src="assets/images/icons/play-arrow.svg" /></button>
+                        <button onclick="ps4q1.pause()"><img src="assets/images/icons/pause-btn.svg" /></button>
+                        <button onclick="ps4q1.reset()"><img src="assets/images/icons/restart-btn.svg" style="transform: scale(1.2);" /></button>
                     </div>
                     <div class="hrow">
                         <div class="vrow spaced btn-col">
-                            <button class="vert">`I`</button>
-                            <button class="vert">`U`</button>
-                            <button class="vert">`R`</button>
+                            <button class="vert hold" onclick="ps4q1.setActive('I')" id="IBtn">`I`</button>
+                            <button class="vert" onclick="ps4q1.setActive('U')" id="UBtn">`U`</button>
+                            <button class="vert" onclick="ps4q1.setActive('R')" id="RBtn">`R`</button>
                         </div>
                         <div class="grid10x" id="ps4q1Board">
-                    </div>
+                        </div>
                     </div>
                     <button class="return-btn" onclick="closeAnimation('ps4q1')">Return</button>
                 </div>
