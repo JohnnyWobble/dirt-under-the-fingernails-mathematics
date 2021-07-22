@@ -3,16 +3,11 @@
 
 $bg-color: #333;
 $header-color: #252525;
-// $text-color-accent: #17252a;
 $text-color: #e6e6e6;
-$light-text-color: #999999;
+$light-text-color: #999;
 $dark-text: #282828;
-// $muted-color: #7a7a7a;
-// $light-gray: #a4aaac;
 
 $main-accent: #ea1c2d;
-// $dark-accent: #2b7a78;
-// $black-accent: #17252a;
 
 *,
 *::before,
@@ -37,7 +32,7 @@ body {
 
 main {
     position: relative;
-    padding: 16px 0 50px  0;
+    padding: 16px 0 50px 0;
     background-color: $bg-color;
     min-height: calc(100% - 100px - 85px); // make it fil the whole page so the footer is in the right position
     border-bottom-left-radius: 50px;
@@ -97,25 +92,34 @@ button {
     font-size: 16px;
     border-radius: 100px;
     cursor: pointer;
-    background-color: rgba($main-accent, .2);
-    transition: .3s;
+    background-color: rgba($main-accent, 0.2);
+    transition: 0.3s;
 
-    &:hover, &.hold {
+    &:hover,
+    &.hold {
         color: $text-color;
         text-decoration: none;
-        background-color: rgba($main-accent, .6);
+        background-color: rgba($main-accent, 0.6);
     }
 }
 
 a {
-    color: rgba($main-accent, .5);
+    color: rgba($main-accent, 0.5);
     text-decoration: none;
     font-weight: bold;
-    transition: .3s;
+    transition: 0.3s;
 
     &:hover {
-        color: rgba($main-accent, .8);
+        color: rgba($main-accent, 0.8);
         text-decoration: none;
+    }
+
+    &.body {
+        color: rgba($main-accent, 0.7);
+
+        &:hover {
+            color: rgba($main-accent, 1);
+        }
     }
 }
 
@@ -123,6 +127,10 @@ div.center-column {
     width: 60%;
     height: fit-content;
     margin: 0 auto;
+
+    &.text-column {
+        width: calc(min(80vw, 700px));
+    }
 }
 
 span.spacer {
@@ -130,6 +138,10 @@ span.spacer {
     height: 100px;
     width: 100%;
     pointer-events: none;
+}
+
+span.italics {
+    font-style: italic;
 }
 
 .separator {
@@ -184,4 +196,8 @@ span.spacer {
 .spaced {
     display: flex;
     justify-content: space-around;
+}
+
+.bold {
+    font-weight: bold;
 }

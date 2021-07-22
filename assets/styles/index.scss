@@ -4,4 +4,12 @@
 
 p {
     text-indent: 46px;
+
+    &.body {
+        line-height: 1.75;
+    }
+}
+
+div.img-text {
+    @extend .hrow;
 }
