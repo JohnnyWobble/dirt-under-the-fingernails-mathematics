@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "shared";
 
 div.center-column {
@@ -24,13 +25,11 @@ div.img-row {
 
 img.gallery-img {
     border-radius: 16px;
-    // width: 25vw;
-    // width: 350px;
     height: 270px;
     transition: 0.3s;
 
     &:hover {
-        opacity: .3;
+        opacity: 0.25;
     }
 }
 
@@ -41,7 +40,7 @@ p.img-text {
     left: 0;
     right: 0;
     opacity: 0;
-    transition: .3s;
+    transition: 0.3s;
     pointer-events: none;
     margin: 40px;
     text-align: center;
@@ -50,5 +49,16 @@ p.img-text {
 
     img:hover + & {
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    div.img-row {
+        flex-direction: column;
+        
+        div.img-box {
+            width: fit-content;
+            margin: auto;
+        }
     }
 }
