@@ -46,6 +46,7 @@ p.img-text {
     text-align: center;
     display: flex;
     align-items: center;
+    text-indent: 0;
 
     img:hover + & {
         opacity: 1;
